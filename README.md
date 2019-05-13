@@ -31,7 +31,7 @@ Register it with the server:
 ```javascript
 'use strict';
 
-const Hapi = require('hapi');
+const Hapi = require('@hapi/hapi');
 
 const init = async function () {
     try {
@@ -46,7 +46,7 @@ const init = async function () {
         })
         await server.start();
         console.log('Server running at:', server.info.uri);
-    }   
+    }
     catch (err) {
         console.error(err);
         process.exit(1);

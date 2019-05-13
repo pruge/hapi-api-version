@@ -1,14 +1,14 @@
 'use strict';
 
-const Hapi = require('hapi');
-const Joi = require('joi');
+const Hapi = require('@hapi/hapi');
+const Joi = require('@hapi/joi');
 
 const init = async function () {
 
     try {
         const server = new Hapi.server({ port: 3000 });
         await server.register({
-            plugin: require('hapi-api-version'),
+            plugin: require('../'),
             options: {
                 validVersions: [1, 2],
                 defaultVersion: 2,
